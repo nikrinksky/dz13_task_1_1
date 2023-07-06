@@ -3,7 +3,7 @@ package sky_hw_13;
 public class Main {
     public static void main(String[] args) {
         Author authorTolstoy = new Author("Лев", "Толстой");
-        Book warAndPeace = new Book("\"Война и мир\"", authorTolstoy, 1867 );
+        Book warAndPeace = new Book("\"Война и мир\"", authorTolstoy, 1867);
 
         System.out.println("Название книги = " + warAndPeace.getTitle());
         System.out.println("Имя автора = " + warAndPeace.getAuthorName().getName());
@@ -20,5 +20,17 @@ public class Main {
 
         authorJulVern.setYear(1875);
         System.out.printf("Год публикации книги %s длился по %s год ", authorJulVern.getTitle(), authorJulVern.getYear());
+
+        //////////////////////////////////////////////////////////
+        System.out.println("\n");
+        System.out.println("----- Здесь проверка кода ДЗ-13-----");
+        System.out.println(warAndPeace);
+        System.out.println(authorJulVern);
+
+        System.out.println(warAndPeace.equals(authorJulVern));
+        Book authorJulVeronni = new Book("\"Таинственны остров\"", new Author("Жюль", "Верн"), 1874);
+        System.out.println(authorJulVern.equals(authorJulVeronni));
+        authorJulVern.setYear(1874);
+        System.out.println(authorJulVern.equals(authorJulVeronni));
     }
 }
